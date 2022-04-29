@@ -1,4 +1,10 @@
 package pages;
 
-public class CheckoutPage {
+import org.openqa.selenium.WebDriver;
+
+public class CheckoutPage extends BasePage {
+
+    public CheckoutPage(WebDriver driver) {
+        super(driver);
+    }
 }
