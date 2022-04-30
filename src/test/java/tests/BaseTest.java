@@ -25,6 +25,9 @@ public class BaseTest {
         if(browser.equals("chrome")) {
             driverType = DriverType.CHROME;
         }
+        if(browser.equals("remote")) {
+            driverType = DriverType.REMOTE;
+        }
         driverManager = factory.getManager(driverType);
         driverManager.createDriver();
         driver = driverManager.getDriver();

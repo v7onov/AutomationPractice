@@ -21,6 +21,6 @@ public class LoginTest extends BaseTest {
         AccountPage accountPage = new AccountPage(driver);
         Assert.assertEquals(accountPage.getWelcomeText(), "Welcome to your account. Here you can manage all of your personal information and orders.", "ERROR");
     }
-    
+
 
 }
