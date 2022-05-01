@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
 
 
     @Test
-    public void LoginTest(){
+    public void logInTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.openMainPage();
         mainPage.clickSignInButton();

@@ -13,6 +13,8 @@ public class SignInPage extends BasePage {
     private By CREATE_ACCOUNT_BUTTON = By.id("SubmitCreate");
     private By SIGN_IN_BUTTON = By.id("SubmitLogin");
     private By FORGOT_PASSWORD_BUTTON = By.cssSelector("[title='Recover your forgotten password']");
+    private By HEADER = By.xpath("//div[@id='center_column']/h1");
+    private By ACCOUNT_BUTTON = By.cssSelector("[title='View my customer account']");
 
 
     public SignInPage(WebDriver driver) {
@@ -38,6 +40,14 @@ public class SignInPage extends BasePage {
 
     public void openPasswordRecoveryPage(){
         driver.findElement(FORGOT_PASSWORD_BUTTON).click();
+    }
+
+    public String checkHeaderText(){
+        return driver.findElement(HEADER).getText();
+    }
+
+    public boolean isAccountButtonShown(){
+        return driver.findElement(ACCOUNT_BUTTON).isDisplayed();
     }
 
 

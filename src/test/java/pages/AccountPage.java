@@ -8,6 +8,8 @@ public class AccountPage extends BasePage {
 
 
     private By WELCOME_TEXT = By.xpath("//p[@class='info-account']");
+    private By LOG_OUT_BUTTON = By.cssSelector("[title='Log me out']");
+    private By LOGO = By.cssSelector("[title='My Store']");
 
     public AccountPage(WebDriver driver) {
         super(driver);
@@ -16,4 +18,14 @@ public class AccountPage extends BasePage {
     public String getWelcomeText(){
         return driver.findElement(WELCOME_TEXT).getText();
     }
+
+    public void performLogout(){
+        driver.findElement(LOG_OUT_BUTTON).click();
+    }
+
+    public void clickLogo(){
+        driver.findElement(LOGO).click();
+    }
+
+
 }

@@ -31,6 +31,6 @@ public class ForgotPasswordFormTest extends BaseTest {
         PasswordRecoveryPage passwordRecoveryPage = new PasswordRecoveryPage(driver);
         passwordRecoveryPage.recoverPasswordWithInvalidEmail();
         Assert.assertEquals(passwordRecoveryPage.getAlertFailedText(), "There is 1 error");
-        
+
     }
 }
