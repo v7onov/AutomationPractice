@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import staticdata.Dresses;
 import staticdata.WebTimeouts;
+import staticdata.WebUrls;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +25,7 @@ public class MainPage extends BasePage {
 
 
     public void openMainPage() {
-        driver.get("https://automationpractice.com/index.php/");
+        driver.get(WebUrls.MAIN_PAGE);
     }
 
     public void clickSignInButton() {

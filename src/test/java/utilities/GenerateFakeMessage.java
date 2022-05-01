@@ -54,4 +54,9 @@ public class GenerateFakeMessage {
         return faker.funnyName().name();
     }
 
+    public static String getComment(){
+        Faker faker = new Faker();
+        return faker.rickAndMorty().quote();
+    }
+
 }
