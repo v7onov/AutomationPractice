@@ -1,7 +1,9 @@
 package pages;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utilities.GenerateFakeMessage;
 
 public class SignInPage extends BasePage {
 
@@ -12,22 +14,26 @@ public class SignInPage extends BasePage {
     private By SIGN_IN_BUTTON = By.id("SubmitLogin");
 
 
-
-
     public SignInPage(WebDriver driver) {
         super(driver);
     }
 
-    public void inputLogin(){
+    public void inputLogin() {
         driver.findElement(SIGN_IN_EMAIL_INPUT_FIELD).sendKeys("testqa2022@mailinator.com");
     }
 
-    public void passwordInput(){
+    public void passwordInput() {
         driver.findElement(PASSWORD_INPUT_FIELD).sendKeys("over9000");
     }
 
-    public void clickSignInButton(){
+    public void clickSignInButton() {
         driver.findElement(SIGN_IN_BUTTON).click();
     }
+
+    public void openRegistrationPage() {
+        driver.findElement(REGISTRATION_EMAIL_INPUT_FIELD).sendKeys(GenerateFakeMessage.getEmail());
+        driver.findElement(CREATE_ACCOUNT_BUTTON).click();
+    }
+
 
 }

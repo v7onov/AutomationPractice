@@ -9,9 +9,6 @@ public class AccountPage extends BasePage {
 
     private By WELCOME_TEXT = By.xpath("//p[@class='info-account']");
 
-
-
-
     public AccountPage(WebDriver driver) {
         super(driver);
     }

@@ -8,3 +8,4 @@ Checklist
 7. Search bar test
 8. Checkout test
 9. Remove some products from the cart test
+10. Feedback form test
