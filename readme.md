@@ -1,6 +1,6 @@
 Checklist
-1. Sign in test
-2. Create account test
+1. Sign in test (done)
+2. Create account test (done)
 3. Forgot password form test
 4. Log out test
 5. Add product to the cart test

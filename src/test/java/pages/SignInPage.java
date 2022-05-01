@@ -12,6 +12,7 @@ public class SignInPage extends BasePage {
     private By REGISTRATION_EMAIL_INPUT_FIELD = By.id("email_create");
     private By CREATE_ACCOUNT_BUTTON = By.id("SubmitCreate");
     private By SIGN_IN_BUTTON = By.id("SubmitLogin");
+    private By FORGOT_PASSWORD_BUTTON = By.cssSelector("[title='Recover your forgotten password']");
 
 
     public SignInPage(WebDriver driver) {
@@ -33,6 +34,10 @@ public class SignInPage extends BasePage {
     public void openRegistrationPage() {
         driver.findElement(REGISTRATION_EMAIL_INPUT_FIELD).sendKeys(GenerateFakeMessage.getEmail());
         driver.findElement(CREATE_ACCOUNT_BUTTON).click();
+    }
+
+    public void openPasswordRecoveryPage(){
+        driver.findElement(FORGOT_PASSWORD_BUTTON).click();
     }
 
 
