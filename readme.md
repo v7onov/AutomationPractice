@@ -6,6 +6,6 @@ Checklist
 5. Add product to the cart test (done)
 6. Product filter test
 7. Search bar test (done)
-8. Checkout test 
+8. Checkout test (done)
 9. Remove some products from the cart test
 10. Feedback form test

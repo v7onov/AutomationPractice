@@ -22,6 +22,8 @@ public class MainPage extends BasePage {
     private By EVENING_DRESSES_BUTTON = By.xpath("(//*[text()='Evening Dresses'])[2]");
     private By DRESS_OPTION = By.xpath("//*[@class='ac_results']/ul/li/*[contains(text(), '"+ Dresses.FIRST_DRESS + "')]");
     private By SEARCH_BAR = By.id("search_query_top");
+    private By FEEDBACK_BUTTON = By.id("contact-link");
+
 
 
     public void openMainPage() {
@@ -57,5 +59,9 @@ public class MainPage extends BasePage {
     public void searchExactDress(){
         driver.findElement(SEARCH_BAR).sendKeys(Dresses.FIRST_DRESS);
         driver.findElement(DRESS_OPTION).click();
+    }
+
+    public void clickFeedbackButton(){
+        driver.findElement(FEEDBACK_BUTTON).click();
     }
 }
