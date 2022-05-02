@@ -8,4 +8,9 @@ Checklist
 7. Search bar test (done)
 8. Checkout test (done)
 9. Remove some products from the cart test
-10. Feedback form test
+10. Feedback form test (done)
+
+To do later:
+
+1. Comparison test
+2. Wishlist test

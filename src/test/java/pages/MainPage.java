@@ -23,6 +23,7 @@ public class MainPage extends BasePage {
     private By DRESS_OPTION = By.xpath("//*[@class='ac_results']/ul/li/*[contains(text(), '"+ Dresses.FIRST_DRESS + "')]");
     private By SEARCH_BAR = By.id("search_query_top");
     private By FEEDBACK_BUTTON = By.id("contact-link");
+    private By CATALOGUE_BUTTON = By.xpath("//a[@title='Women']");
 
 
 
@@ -63,5 +64,9 @@ public class MainPage extends BasePage {
 
     public void clickFeedbackButton(){
         driver.findElement(FEEDBACK_BUTTON).click();
+    }
+
+    public void clickCatalogueButton(){
+        driver.findElement(CATALOGUE_BUTTON).click();
     }
 }
