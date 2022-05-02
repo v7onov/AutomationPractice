@@ -13,6 +13,7 @@ public class FilterTest extends BaseTest {
         mainPage.openMainPage();
         mainPage.clickCatalogueButton();
         CataloguePage cataloguePage = new CataloguePage(driver);
+        driverManager.removeTimeout();
         Assert.assertTrue(cataloguePage.isFilterWork());
     }
 }

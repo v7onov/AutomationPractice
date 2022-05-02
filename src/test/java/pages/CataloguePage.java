@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CataloguePage extends BasePage {
 
@@ -24,6 +26,8 @@ public class CataloguePage extends BasePage {
         driver.findElement(S_SIZE_SCHECKBOX).click();
         driver.findElement(ORANGE_COLOR_CHECKBOX).click();
         driver.findElement(COTTON_CHECKBOX).click();
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(LOADING_GIF));
         return (driver.findElements(PRODUCT_ITEM).size() < overallProductQuantity);
     }
 
