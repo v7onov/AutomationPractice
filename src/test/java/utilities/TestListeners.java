@@ -17,6 +17,7 @@ public class TestListeners implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+        System.out.println("Test ".concat(iTestResult.getName()).concat(" completed"));
         Object currentClass = iTestResult.getInstance();
         WebDriver webDriver = ((BaseTest) currentClass).getDriver();
         AllureService allureService = new AllureService();

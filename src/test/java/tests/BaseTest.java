@@ -21,14 +21,17 @@ public class BaseTest {
     public void setUp(@Optional("chrome") String browser) throws MalformedURLException {
         DriverFactory factory = new DriverFactory();
         driverType = null;
-        if(browser.equals("chrome")) {
+        if (browser.equals("chrome")) {
             driverType = DriverType.CHROME;
         }
-        if(browser.equals("remote")) {
+        if (browser.equals("remote")) {
             driverType = DriverType.REMOTE;
         }
-        if(browser.equals("safari")) {
+        if (browser.equals("safari")) {
             driverType = DriverType.SAFARI;
+        }
+        if (browser.equals("firefox")) {
+            driverType = DriverType.FIREFOX;
         }
         driverManager = factory.getManager(driverType);
         driverManager.createDriver();
@@ -47,7 +50,6 @@ public class BaseTest {
         driverManager.quitDriver();
     }
 
-    public void setTimeout(){
-
+    public void setTimeout() {
     }
 }

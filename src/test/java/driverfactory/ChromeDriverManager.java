@@ -11,8 +11,8 @@ public class ChromeDriverManager extends DriverManager {
         PropertiesManager propertiesManager = new PropertiesManager();
         System.setProperty("webdriver.chrome.driver", propertiesManager.get("PATH_TO_CHROME_DRIVER"));
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--disable-notifications", "--headless");
-        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-notifications", "--headless");
+//        options.addArguments("--disable-notifications");
         driver = new ChromeDriver(options);
     }
 }
