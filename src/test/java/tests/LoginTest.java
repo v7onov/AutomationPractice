@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.AccountPage;
 import pages.MainPage;
 import pages.SignInPage;
+import testdata.GetNewLoginModel;
 
 public class LoginTest extends BaseTest {
 
@@ -15,9 +16,7 @@ public class LoginTest extends BaseTest {
         mainPage.openMainPage();
         mainPage.clickSignInButton();
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.inputLogin();
-        signInPage.passwordInput();
-        signInPage.clickSignInButton();
+        signInPage.logIn(GetNewLoginModel.getCredentials());
         AccountPage accountPage = new AccountPage(driver);
         Assert.assertEquals(accountPage.getWelcomeText(), "Welcome to your account. Here you can manage all of your personal information and orders.", "ERROR");
     }

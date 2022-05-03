@@ -41,11 +41,9 @@ public class RegistrationPage extends BasePage {
         driver.findElement(CUSTOMER_LAST_NAME).sendKeys(registrationModel.getLastName());
         driver.findElement(PASSWORD).sendKeys(registrationModel.getPassword());
 
-//        WebElement selectBirthDay = driver.findElement(BIRTH_DAY);
         Select selectDay = new Select(driver.findElement(BIRTH_DAY));
         selectDay.selectByIndex(5);
 
-//        WebElement selectBirthMonth = driver.findElement(BIRTH_MONTH);
         Select selectMonth = new Select(driver.findElement(BIRTH_MONTH));
         selectMonth.selectByIndex(8);
 

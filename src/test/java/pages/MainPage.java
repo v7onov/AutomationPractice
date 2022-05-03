@@ -24,6 +24,13 @@ public class MainPage extends BasePage {
     private By SEARCH_BAR = By.id("search_query_top");
     private By FEEDBACK_BUTTON = By.id("contact-link");
     private By CATALOGUE_BUTTON = By.xpath("//a[@title='Women']");
+    private By FIRST_PRODUCT = By.xpath("(//div[@class='product-container'])[1]");
+    private By SECOND_PRODUCT = By.xpath("(//div[@class='product-container'])[2]");
+    private By THIRD_PRODUCT = By.xpath("(//div[@class='product-container'])[3]");
+    private By FIRST_ADD_TO_CART_BUTTON = By.xpath("(//div[@class='product-container'])[1]//a[@title='Add to cart']");
+    private By SECOND_ADD_TO_CART_BUTTON = By.xpath("(//div[@class='product-container'])[2]//a[@title='Add to cart']");
+    private By THIRD_ADD_TO_CART_BUTTON = By.xpath("(//div[@class='product-container'])[3]//a[@title='Add to cart']");
+    private By SHOPPING_CART_BUTTON = By.cssSelector("[title='View my shopping cart']");
 
 
 
@@ -68,5 +75,20 @@ public class MainPage extends BasePage {
 
     public void clickCatalogueButton(){
         driver.findElement(CATALOGUE_BUTTON).click();
+    }
+
+    public void addThreeProductsToCart(){
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(FIRST_PRODUCT));
+        action.click(driver.findElement(FIRST_ADD_TO_CART_BUTTON));
+        action.moveToElement(driver.findElement(SECOND_PRODUCT));
+        action.click(driver.findElement(SECOND_ADD_TO_CART_BUTTON));
+        action.moveToElement(driver.findElement(THIRD_PRODUCT));
+        action.click(driver.findElement(THIRD_ADD_TO_CART_BUTTON));
+        action.perform();
+    }
+
+    public void openShoppingCart(){
+        driver.findElement(SHOPPING_CART_BUTTON).click();
     }
 }

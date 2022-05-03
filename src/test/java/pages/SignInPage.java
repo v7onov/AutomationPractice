@@ -1,9 +1,11 @@
 package pages;
 
 import com.github.javafaker.Faker;
+import models.LoginModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utilities.GenerateFakeMessage;
+import utilities.PropertiesManager;
 
 public class SignInPage extends BasePage {
 
@@ -21,15 +23,11 @@ public class SignInPage extends BasePage {
         super(driver);
     }
 
-    public void inputLogin() {
-        driver.findElement(SIGN_IN_EMAIL_INPUT_FIELD).sendKeys("testqa2022@mailinator.com");
-    }
 
-    public void passwordInput() {
-        driver.findElement(PASSWORD_INPUT_FIELD).sendKeys("over9000");
-    }
+    public void logIn(LoginModel loginModel) {
 
-    public void clickSignInButton() {
+        driver.findElement(SIGN_IN_EMAIL_INPUT_FIELD).sendKeys(loginModel.getLogin());
+        driver.findElement(PASSWORD_INPUT_FIELD).sendKeys(loginModel.getPassword());
         driver.findElement(SIGN_IN_BUTTON).click();
     }
 
@@ -38,15 +36,15 @@ public class SignInPage extends BasePage {
         driver.findElement(CREATE_ACCOUNT_BUTTON).click();
     }
 
-    public void openPasswordRecoveryPage(){
+    public void openPasswordRecoveryPage() {
         driver.findElement(FORGOT_PASSWORD_BUTTON).click();
     }
 
-    public String checkHeaderText(){
+    public String checkHeaderText() {
         return driver.findElement(HEADER).getText();
     }
 
-    public boolean isAccountButtonShown(){
+    public boolean isAccountButtonShown() {
         return driver.findElement(ACCOUNT_BUTTON).isDisplayed();
     }
 

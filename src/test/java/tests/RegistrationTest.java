@@ -1,6 +1,5 @@
 package tests;
 
-import models.RegistrationModel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AccountPage;

@@ -1,12 +1,12 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AccountPage;
 import pages.EveningDressesPage;
 import pages.MainPage;
 import pages.SignInPage;
+import testdata.GetNewLoginModel;
 
 public class AddProductToTheCartTest extends BaseTest {
 
@@ -16,9 +16,7 @@ public class AddProductToTheCartTest extends BaseTest {
         mainPage.openMainPage();
         mainPage.clickSignInButton();
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.inputLogin();
-        signInPage.passwordInput();
-        signInPage.clickSignInButton();
+        signInPage.logIn(GetNewLoginModel.getCredentials());
         AccountPage accountPage = new AccountPage(driver);
         accountPage.clickLogo();
         mainPage.selectEveningDresses();

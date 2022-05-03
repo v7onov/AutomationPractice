@@ -2,8 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import staticdata.Emails;
 import utilities.GenerateFakeMessage;
+import utilities.PropertiesManager;
+
 
 public class PasswordRecoveryPage extends BasePage {
 
@@ -18,7 +19,8 @@ public class PasswordRecoveryPage extends BasePage {
     }
 
     public void recoverPassword(){
-        driver.findElement(EMAIL_INPUT_FIELD).sendKeys(Emails.VALID_EMAIL);
+        PropertiesManager propertiesManager = new PropertiesManager();
+        driver.findElement(EMAIL_INPUT_FIELD).sendKeys(propertiesManager.get("EMAIL"));
         driver.findElement(RETRIEVE_PASSWORD_BUTTON).click();
     }
 

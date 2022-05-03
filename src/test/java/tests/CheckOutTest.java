@@ -1,8 +1,10 @@
 package tests;
 
+import models.LoginModel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
+import testdata.GetNewLoginModel;
 
 public class CheckOutTest extends BaseTest {
 
@@ -14,9 +16,7 @@ public class CheckOutTest extends BaseTest {
         mainPage.openMainPage();
         mainPage.clickSignInButton();
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.inputLogin();
-        signInPage.passwordInput();
-        signInPage.clickSignInButton();
+        signInPage.logIn(GetNewLoginModel.getCredentials());
         AccountPage accountPage = new AccountPage(driver);
         accountPage.clickLogo();
         mainPage.selectEveningDresses();
