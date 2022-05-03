@@ -41,7 +41,7 @@ public class GenerateFakeMessage {
 
     public static String getZipCode(){
         Faker faker = new Faker();
-        return faker.address().zipCode();
+        return faker.numerify("#####");
     }
 
     public static String getPhoneNumber(){

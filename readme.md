@@ -1,4 +1,7 @@
+This project was made to test online store automationpractice.com
+
 Checklist
+
 1. Sign in test (done)
 2. Create account test (done)
 3. Forgot password form test (done)

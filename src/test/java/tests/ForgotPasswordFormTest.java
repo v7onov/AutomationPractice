@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.PasswordRecoveryPage;
 import pages.SignInPage;
-import staticdata.Emails;
+import utilities.PropertiesManager;
 
 public class ForgotPasswordFormTest extends BaseTest {
 
@@ -18,7 +18,8 @@ public class ForgotPasswordFormTest extends BaseTest {
         signInPage.openPasswordRecoveryPage();
         PasswordRecoveryPage passwordRecoveryPage = new PasswordRecoveryPage(driver);
         passwordRecoveryPage.recoverPassword();
-        Assert.assertEquals(passwordRecoveryPage.getAlertSuccessText(), "A confirmation email has been sent to your address: " + Emails.VALID_EMAIL);
+        PropertiesManager propertiesManager = new PropertiesManager();
+        Assert.assertEquals(passwordRecoveryPage.getAlertSuccessText(), "A confirmation email has been sent to your address: " + propertiesManager.get("EMAIL"));
     }
 
     @Test

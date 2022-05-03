@@ -1,14 +1,11 @@
 package tests;
 
-import models.LoginModel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 import testdata.GetNewLoginModel;
 
 public class CheckOutTest extends BaseTest {
-
-
 
     @Test
     public void buyOneDressTest(){

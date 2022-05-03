@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test" thread-count="2" parallel="tests">
+    <test name="Account and forms tests">
+        <classes>
+            <class name="tests.LoginTest"></class>
+            <class name="tests.RegistrationTest"></class>
+            <class name="tests.LogoutTest"></class>
+            <class name="tests.ForgotPasswordFormTest"></class>
+            <class name="tests.FeedbackTest"></class>
+            <parameter name="browser" value="chrome"></parameter>
+        </classes>
+    </test>
+    <test name="Catalogue and cart tests">
+        <classes>
+            <class name="tests.AddProductToTheCartTest"></class>
+            <class name="tests.FilterTest"></class>
+            <class name="tests.SearchBarTest"></class>
+            <class name="tests.CheckOutTest"></class>
+            <class name="tests.RemoveProductsFromCartTest"></class>
+            <parameter name="browser" value="remote"></parameter>
+        </classes>
+    </test>
+</suite>
