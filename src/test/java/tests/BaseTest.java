@@ -16,7 +16,7 @@ public class BaseTest {
     DriverManager driverManager;
     DriverType driverType;
 
-    @BeforeClass
+    @BeforeMethod
     @Parameters("browser")
     public void setUp(@Optional("chrome") String browser) throws MalformedURLException {
         DriverFactory factory = new DriverFactory();
@@ -45,7 +45,7 @@ public class BaseTest {
         return driver;
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         driverManager.quitDriver();
     }

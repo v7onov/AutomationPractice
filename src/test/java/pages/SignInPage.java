@@ -1,11 +1,9 @@
 package pages;
 
-import com.github.javafaker.Faker;
 import models.LoginModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utilities.GenerateFakeMessage;
-import utilities.PropertiesManager;
 
 public class SignInPage extends BasePage {
 
