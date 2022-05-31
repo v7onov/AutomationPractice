@@ -1,3 +1,4 @@
+Diploma project (TeachMeSkills)
 This project was made to test online store automationpractice.com
 
 Checklist
